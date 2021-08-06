@@ -1,0 +1,207 @@
+* HTML *
+
+<head>
+<title>Index page</title>
+<script src='RWD.js'></script>
+<link href= "C:\Users\Josh\OneDrive - Deakin University\Uni\T2\SIT120\RWD Project - Student hub site\RWD.css" rel = "stylesheet" type = "text/css" >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h2>StudyCentre</h2>
+</div>
+<div class="profiletext">
+    <h6>Welcome Guest</h6>
+</div>
+<div class="sidenav" id="mysideNav">
+    <a href="Calendar.html">Calendar</a>
+    <a href="#">Tasks to complete</a>
+    <a href="Notes.html">Notes</a>
+    <a href="#">IN CONSTRUCTION</a>
+    <a href="timer.html">Study Timer</a>
+    <input type="text" placeholder="Search...">
+</div>
+<div class="row">
+    <div class="main">Welcome!</div>
+</div>
+<div class="links">
+    <p>Links to resources</p>
+    <a href="https://sync.deakin.edu.au/">DeakinSync</a>
+    <p><a href="https://stackoverflow.com/">Stack Overflow</a></p>
+    <p><a href="https://www.w3schools.com/">W3Schools</a></p>
+    <p><a href="https://sync.deakin.edu.au/">DeakinSync</a></p>
+    <p><a href="https://sync.deakin.edu.au/">DeakinSync</a></p>
+</div>
+<div class="assignment">
+    <p>Assignments to complete:</p>
+    <p>[NULL]</p>
+</div>
+<div class="completion">
+    <p>Percentage of assignments completed:</p>
+    <p>[NULL]</p>
+</div>
+    
+</body>
+  
+  
+* CSS * 
+
+.header {
+    padding: 5px;
+    text-align: center;
+    background: #393E46;
+    color: white;
+}
+
+.header h1 {
+    font-size: 25px
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #393E46;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav input[type=text] {
+    bottom: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding : 20px;
+}
+
+.main {
+    flex: 70%;
+    text-align: center;
+    font-size: 50;
+    background-color: #AAD8D3;
+    padding: 40px;
+}
+
+.links {
+    right: 0px;
+    position: absolute;
+    bottom: 425px;
+    background-color: #00ADB5;
+    border: #00ADB5;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid; 
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400 px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+ .timebar {
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    background-color: #000000;     
+ }
+
+ #main {
+     transition: margin-left .5s;
+     padding: 20px;
+ }
+ 
+ .assignment {
+    position: fixed;
+    height: 200px;
+    width: 500px;
+    background-color: #393E46;
+    border: #393E46;
+    left: 220px;
+    top: 350px;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    color: white;  
+}
+
+.completion {
+    position: fixed;
+    height: 200px;
+    width: 500px;
+    background-color: #393E46;
+    border: #393E46;
+    right: 450px;
+    top: 350px;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    color: white; 
+}
+
+.profiletext {
+    font-size: 20px;
+    position: fixed;
+    right: 75px;
+    top: 10px;
+    color: #00ADB5; 
+}
+
+
+* JavaScript *
+
+document.getElementById("date").innerHTML = Date();
+<input id="date" type="time" step="1"/>
+
+function openNav() {
+    document.getElementById("mysideNav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mysideNav").style.width = "0px";
+}
